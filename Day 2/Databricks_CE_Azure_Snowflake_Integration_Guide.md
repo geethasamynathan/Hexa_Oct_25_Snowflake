@@ -136,8 +136,8 @@ df = pd.read_csv(url, sep=",", encoding="utf-8-sig")
 
 conn = snowflake.connector.connect(
     user="GEETHA",
-    password="MySnowflakecred1",
-    account="YGVSEGU-JE02852",
+    password="********",
+    account="<snowflake.account>",
     warehouse="COMPUTE_WH",
     database="MY_PRACTICE_DB",
     schema="MY_SCHEMA"
@@ -197,8 +197,8 @@ from snowflake.snowpark.functions import col
 
 connection_params = {
     "user":"GEETHA",
-    "password":"MySnowflakecred1",
-    "account":"YGVSEGU-JE02852",
+    "password":"********",
+    "account":"<snowflake.account>",
     "warehouse":"COMPUTE_WH",
     "database":"MY_PRACTICE_DB",
     "schema":"MY_SCHEMA"
