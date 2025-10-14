@@ -87,11 +87,7 @@ ID,CUSTOMER,REGION,AMOUNT
 import pandas as pd
 
 url = (
-    "https://hexadatalakestore.blob.core.windows.net/"
-    "salesdata/sales_2025_10_13.csv"
-    "?sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupiytfx"
-    "&se=2025-10-14T18:52:49Z&st=2025-10-14T10:37:49Z"
-    "&spr=https&sig=8hWQU%2BEtYbKnHXwp%2Bdt1wOAFrmBtIqzZRy41BWRbCQE%3D"
+    "Azure storage container url with sas token"
 )
 
 df = pd.read_csv(url)
@@ -122,11 +118,7 @@ from snowflake.connector.pandas_tools import write_pandas
 import pandas as pd
 
 url = (
-    "https://hexadatalakestore.blob.core.windows.net/"
-    "salesdata/sales_2025_10_13.csv"
-    "?sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupiytfx"
-    "&se=2025-10-14T18:52:49Z&st=2025-10-14T10:37:49Z"
-    "&spr=https&sig=8hWQU%2BEtYbKnHXwp%2Bdt1wOAFrmBtIqzZRy41BWRbCQE%3D"
+    "Azure storage container url with sas token"
 )
 
 df = pd.read_csv(url, sep=",", encoding="utf-8-sig")
