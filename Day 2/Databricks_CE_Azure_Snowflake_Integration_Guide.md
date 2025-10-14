@@ -47,7 +47,7 @@ SELECT * FROM SALES;
 
 1. In Azure Portal → **Storage Accounts → + Create**
 2. Resource group → choose any
-3. Storage account name → `hexadatalakestore`
+3. Storage account name → `storageaccountname`
 4. Region → same as Snowflake region  
 5. After creation → Go to **Access keys** and copy:
    - **Storage account name**
@@ -127,7 +127,7 @@ df = pd.read_csv(url, sep=",", encoding="utf-8-sig")
 #df["AMOUNT"] = df["AMOUNT"].astype(float)
 
 conn = snowflake.connector.connect(
-    user="GEETHA",
+    user="snowflake_username",
     password="********",
     account="<snowflake.account>",
     warehouse="COMPUTE_WH",
@@ -188,7 +188,7 @@ from snowflake.snowpark import Session
 from snowflake.snowpark.functions import col
 
 connection_params = {
-    "user":"GEETHA",
+    "user":"snowflake_username",
     "password":"********",
     "account":"<snowflake.account>",
     "warehouse":"COMPUTE_WH",
