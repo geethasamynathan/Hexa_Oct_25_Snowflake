@@ -1,0 +1,87 @@
+CREATE OR REPLACE DATABASE SNOWPIPE;
+
+-- create integration object that contains the access information
+CREATE OR REPLACE STORAGE INTEGRATION azure_snowpipe_integration
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = AZURE
+  ENABLED = TRUE
+  AZURE_TENANT_ID =  '51919faa-a7c3-43e9-bc7d-73c7742bc6a3'
+  STORAGE_ALLOWED_LOCATIONS = ( 'azure://snowflakehexasa.blob.core.windows.net/democontainer');
+
+  
+  
+-- Describe integration object to provide access
+DESC STORAGE integration azure_snowpipe_integration;
+
+
+CREATE OR REPLACE file format snowpipe.public.fileformat_azure
+TYPE=CSV
+FIELD_DELIMITER=','
+SKIP_HEADER=1;
+
+
+create or replace stage snowpipe.public.stage_azure
+STORAGE_INTEGRATION= azure_snowpipe_integration
+URL='azure://snowflakehexasa.blob.core.windows.net/democontainer'
+FILE_FORMAT=fileformat_azure;
+
+
+lIST @SNOWPIPE.PUBLIC.STAGE_AZURE;
+
+
+CREATE OR REPLACE NOTIFICATION INTEGRATION snowpipe_event
+ENABLED=TRUE
+TYPE=QUEUE
+NOTIFICATION_PROVIDER = AZURE_STORAGE_QUEUE
+AZURE_STORAGE_QUEUE_PRIMARY_URI='https://snowflakehexasa.queue.core.windows.net/snowpipequeue'
+AZURE_TENANT_ID='51919faa-a7c3-43e9-bc7d-73c7742bc6a3';
+
+
+DESC notification integration snowpipe_event;
+
+List @stage_azure;
+
+select $1,$2,$3,$4,$5,$6,$7,$8
+from @stage_azure;
+
+
+create or replace table snowpipe.public.happiness (
+    country_name varchar,
+    regional_indicator varchar,
+    ladder_score number(4,3),
+    standard_error number(4,3),
+    upperwhisker number(4,3),
+    lowerwhisker number(4,3),
+    logged_gdp number(5,3),
+    social_support number(4,3),
+    healthy_life_expectancy number(5,3),
+    freedom_to_make_life_choices number(4,3),
+    generosity number(4,3),
+    perceptions_of_corruption number(4,3),
+    ladder_score_in_dystopia number(4,3),
+    explained_by_log_gpd_per_capita number(4,3),
+    explained_by_social_support number(4,3),
+    explained_by_healthy_life_expectancy number(4,3),
+    explained_by_freedom_to_make_life_choices number(4,3),
+    explained_by_generosity number(4,3),
+    explained_by_perceptions_of_corruption number(4,3),
+    dystopia_residual number (4,3));
+
+    select * from  happiness;
+
+    copy into happiness
+    from @stage_azure;
+
+    truncate table happiness;
+
+CREATE PIPE AZURE_PIPE
+AUTO_INGEST=TRUE
+INTEGRATION='SNOWPIPE_EVENT'
+AS
+COPY INTO HAPPINESS
+FROM @STAGE_AZURE;
+
+
+select * from happiness
+show integrations;
+    
