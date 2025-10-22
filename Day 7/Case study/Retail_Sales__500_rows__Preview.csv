@@ -1,0 +1,26 @@
+OrderID,OrderDate,MonthOfSale,CustomerID,CustomerName,Country,Region,City,Category,Subcategory,Quantity,Discount,Sales,Profit
+ORD-5F8D6F0C,2024-10-08,2024-10,CUST1000,Ananya Sharma,India,South,Mumbai,Office Supplies,Paper,9,0.0,2700.0,780.43
+ORD-BF0078E4,2024-08-11,2024-08,CUST1001,Aarav Iyer,India,Central,Lucknow,Technology,Networking,4,0.15,27200.0,4135.6
+ORD-86CD58A3,2024-06-12,2024-06,CUST1002,Arjun Sharma,USA,East,Kolkata,Furniture,Tables,4,0.1,31500.0,5676.96
+ORD-FB0CD2D9,2024-12-18,2024-12,CUST1003,Ananya Das,India,North,Kolkata,Office Supplies,Appliances,9,0.0,36000.0,11783.22
+ORD-EF35596B,2024-10-27,2024-10,CUST1004,Ishaan Bhat,UK,Central,Chennai,Furniture,Storage,4,0.0,24000.0,4189.98
+ORD-60D1DA88,2024-08-26,2024-08,CUST1005,Neha Iyer,UAE,West,Chennai,Furniture,Furnishings,6,0.05,16387.5,3392.51
+ORD-A5081404,2025-09-15,2025-09,CUST1006,Arjun Iyer,India,Central,Jaipur,Office Supplies,Binders,3,0.15,1147.5,307.47
+ORD-E1C9BE42,2024-02-27,2024-02,CUST1007,Priya Singh,India,North,Lucknow,Furniture,Furnishings,5,0.0,12500.0,2388.73
+ORD-4FCB3B05,2025-05-26,2025-05,CUST1008,Kabir Menon,India,West,Jaipur,Technology,Printers,3,0.05,42750.0,8742.33
+ORD-921966C8,2025-03-14,2025-03,CUST1009,Arjun Chopra,UAE,West,Mumbai,Furniture,Tables,3,0.15,20527.5,3676.29
+ORD-E4A002F0,2024-06-12,2024-06,CUST1010,Ananya Patel,UK,West,Ahmedabad,Office Supplies,Paper,7,0.15,2142.0,620.3
+ORD-0944D71F,2025-07-20,2025-07,CUST1011,Sanjay Gupta,UAE,North,Pune,Office Supplies,Paper,9,0.1,2794.5,857.52
+ORD-7E28FF54,2025-03-21,2025-03,CUST1012,Ananya Khan,India,North,Delhi,Office Supplies,Art,9,0.05,6840.0,1920.45
+ORD-55961D4C,2025-09-15,2025-09,CUST1013,Neha Mehta,India,East,Ahmedabad,Technology,Networking,9,0.0,72000.0,13672.4
+ORD-6BE57CAD,2025-01-06,2025-01,CUST1014,Aarav Reddy,UAE,East,Ahmedabad,Technology,Laptops,4,0.0,299000.0,41431.04
+ORD-1D9DC086,2024-05-08,2024-05,CUST1015,Ishaan Bhat,India,West,Jaipur,Office Supplies,Binders,5,0.15,1912.5,624.31
+ORD-9B484AF9,2025-02-12,2025-02,CUST1016,Rohan Khan,Singapore,East,Delhi,Furniture,Storage,8,0.0,47200.0,9194.11
+ORD-42167295,2025-08-25,2025-08,CUST1017,Kabir Sharma,India,Central,Mumbai,Technology,Laptops,2,0.0,130000.0,19876.24
+ORD-A91119D6,2025-06-10,2025-06,CUST1018,Kabir Iyer,India,West,Ahmedabad,Technology,Networking,3,0.15,20400.0,3147.71
+ORD-951CD78B,2024-04-06,2024-04,CUST1019,Sneha Menon,India,West,Mumbai,Furniture,Furnishings,7,0.15,14875.0,3813.71
+ORD-B6A75DA5,2025-02-16,2025-02,CUST1020,Ananya Verma,USA,North,Bengaluru,Technology,Mobiles,4,0.15,106250.0,15301.94
+ORD-6D74C638,2024-09-12,2024-09,CUST1021,Arjun Gowda,UAE,North,Jaipur,Furniture,Storage,2,0.0,11500.0,2704.97
+ORD-93240C28,2024-08-30,2024-08,CUST1022,Aarav Iyer,India,West,Mumbai,Furniture,Tables,7,0.0,49000.0,9136.72
+ORD-5879FE91,2025-04-10,2025-04,CUST1023,Rahul Gupta,India,Central,Mumbai,Office Supplies,Appliances,3,0.05,11400.0,2960.25
+ORD-2937A4C5,2024-03-03,2024-03,CUST1024,Nikhil Bhat,USA,North,Jaipur,Technology,Networking,8,0.05,76000.0,10312.28
